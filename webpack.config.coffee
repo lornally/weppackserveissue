@@ -30,7 +30,8 @@ html =
 		new CleanWebpackPlugin cleanStaleWebpackAssets: false
 		new HtmlWebpackPlugin	title: 'Development'
 	]
-	devServer: contentBase: './dist/html'
+	#devServer: contentBase: './dist/html'
+	devServer: contentBase: './dist/html', publicPath: '/dist/html'
 
 module.exports=[html,cmd]
 

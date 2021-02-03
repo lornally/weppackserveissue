@@ -30,10 +30,19 @@ html =
 		new CleanWebpackPlugin cleanStaleWebpackAssets: false
 		new HtmlWebpackPlugin	title: 'Development'
 	]
-	#devServer: contentBase: './dist/html'
-	devServer: contentBase: './dist/html', publicPath: '/dist/html'
 
-module.exports=[html,cmd]
 
-#module.exports = [ cmd, html ]
+# with this, http://localhost:8080/ allways show dir /
+devServer:
+	contentBase: './dist/html'
+	publicPath: '/dist/html'
+
+
+
+
+# if export this http://localhost:8080/ is right show index.ejs
+module.exports= html
+
+# if export this http://localhost:8080/ is only show dir ./
+module.exports = [ cmd, html ]
 

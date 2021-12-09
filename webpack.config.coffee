@@ -16,6 +16,8 @@ cmd =
 
 
 html =
+	# name is key setting 必须设置这个.
+	name: 'site'
 	mode: 'development'
 	devtool: 'inline-source-map'
 	entry:
@@ -33,15 +35,15 @@ html =
 
 
 # with this, http://localhost:8080/ allways show dir /
-devServer:
-	contentBase: './dist/html'
-	publicPath: '/dist/html'
+#devServer:
+#	contentBase: './dist/html'
+#	publicPath: '/dist/html'
 
 
 
 
 # if export this http://localhost:8080/ is right show index.ejs
-module.exports= html
+#module.exports= html
 
 # if export this http://localhost:8080/ is only show dir ./
 module.exports = [ cmd, html ]
